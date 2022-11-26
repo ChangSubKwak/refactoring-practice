@@ -1,14 +1,14 @@
 package problem._4_move_method;
 
-public class AccountType {
+public class AccountTypeV1 {
     private  boolean premium;
 
-    private AccountType(boolean premium) {
+    private AccountTypeV1(boolean premium) {
         this.premium = premium;
     }
 
-    public static AccountType from(boolean premium) {
-        return new AccountType(premium);
+    public static AccountTypeV1 from(boolean premium) {
+        return new AccountTypeV1(premium);
     }
 
     public boolean isPremium() {
