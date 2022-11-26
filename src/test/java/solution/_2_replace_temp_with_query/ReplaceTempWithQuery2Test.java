@@ -1,6 +1,7 @@
-package problem._2_replace_temp_with_query;
+package solution._2_replace_temp_with_query;
 
 import org.junit.jupiter.api.Test;
+
 
 import java.io.OutputStream;
 import java.util.Arrays;
@@ -8,7 +9,7 @@ import java.util.Arrays;
 import static org.assertj.core.api.Assertions.assertThat;
 import static problem.CommonUtil.getOutputStream;
 
-class ReplaceTempWithQueryTest {
+class ReplaceTempWithQuery2Test {
 
     @Test
     void printOwing() {
