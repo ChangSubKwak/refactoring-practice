@@ -5,19 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReplaceTempWithQuery2Test {
+class ReplaceTempWithQuery1Test {
 
     @DisplayName("quantity * price 값이 1000 이하의 경우")
     @Test
     void test1() {
-        ReplaceTempWithQuery2 replaceTempWithQuery2 = new ReplaceTempWithQuery2(1, 500);
-        assertThat(replaceTempWithQuery2.getPrice()).isEqualTo(980);
+        ReplaceTempWithQuery1 replaceTempWithQuery1 = new ReplaceTempWithQuery1(1, 500);
+        assertThat(replaceTempWithQuery1.getPrice()).isEqualTo(490);
     }
 
     @DisplayName("quantity * price 값이 1000 초과의 경우")
     @Test
     void test2() {
-        ReplaceTempWithQuery2 replaceTempWithQuery2 = new ReplaceTempWithQuery2(5, 500);
-        assertThat(replaceTempWithQuery2.getPrice()).isEqualTo(950);
+        ReplaceTempWithQuery1 replaceTempWithQuery1 = new ReplaceTempWithQuery1(5, 500);
+        assertThat(replaceTempWithQuery1.getPrice()).isEqualTo(2375);
     }
 }

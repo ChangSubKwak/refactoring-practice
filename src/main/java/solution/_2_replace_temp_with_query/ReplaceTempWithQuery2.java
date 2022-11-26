@@ -1,73 +1,31 @@
 package solution._2_replace_temp_with_query;
 
-import java.util.List;
+public class ReplaceTempWithQuery2 {
+    private int quantity;
+    private int itemPrice;
 
-public class ReplaceTempWithQuery {
-    private String name;
-    private List<Double> amounts;
-
-    private ReplaceTempWithQuery(String name, List<Double> amounts) {
-        this.name = name;
-        this.amounts = amounts;
+    public ReplaceTempWithQuery2(int quantity, int itemPrice) {
+        this.quantity = quantity;
+        this.itemPrice = itemPrice;
     }
 
-    public static ReplaceTempWithQuery of(String name, List<Double> amounts) {
-        return new ReplaceTempWithQuery(name, amounts);
+    public double getPrice() {
+        return getTwoItemPrice() * getDiscountFactor();
     }
 
-    public void printOwingOriginal() {
-        double outstanding1 = 0.0;
-        double outstanding2 = 0.0;
-        double outstanding3 = 0.0;
-        double outstanding4 = 0.0;
-
-        for (Double amount : amounts) {
-            outstanding1 += amount;
-            outstanding2 += amount * 2;
-            outstanding3 += amount * 3;
-        }
-        outstanding4 += outstanding1 + outstanding2 + outstanding3;
-
-        System.out.println("name : " + name);
-        System.out.println("amount1 : " + outstanding1);
-        System.out.println("amount2 : " + outstanding2);
-        System.out.println("amount3 : " + outstanding3);
-        System.out.println("amount4 : " + outstanding4);
+    private double getDiscountFactor() {
+        double discountFactor;
+        if (getBasePrice() > 1000) discountFactor = 0.95;
+        else discountFactor = 0.98;
+        return discountFactor;
     }
 
-    public void printOwing() {
-        System.out.println("name : " + name);
-        System.out.println("amount1 : " + getOutstanding1());
-        System.out.println("amount2 : " + getOutstanding2());
-        System.out.println("amount3 : " + getOutstanding3());
-        System.out.println("amount4 : " + getOutstanding4());
+    private int getBasePrice() {
+        return quantity * itemPrice;
     }
 
-    private double getOutstanding1() {
-        double result = 0.0;
-        for (Double amount : amounts) {
-            result += amount;
-        }
-        return result;
+    private int getTwoItemPrice() {
+        return itemPrice * 2;
     }
 
-    private double getOutstanding2() {
-        double result = 0.0;
-        for (Double amount : amounts) {
-            result += amount * 2;
-        }
-        return result;
-    }
-
-    private double getOutstanding3() {
-        double result = 0.0;
-        for (Double amount : amounts) {
-            result += amount * 3;
-        }
-        return result;
-    }
-
-    private double getOutstanding4() {
-        return getOutstanding1() + getOutstanding2() + getOutstanding3();
-    }
 }

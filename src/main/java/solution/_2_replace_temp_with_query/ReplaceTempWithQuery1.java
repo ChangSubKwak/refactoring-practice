@@ -1,10 +1,10 @@
 package solution._2_replace_temp_with_query;
 
-public class ReplaceTempWithQuery {
+public class ReplaceTempWithQuery1 {
     private int quantity;
     private int itemPrice;
 
-    public ReplaceTempWithQuery(int quantity, int itemPrice) {
+    public ReplaceTempWithQuery1(int quantity, int itemPrice) {
         this.quantity = quantity;
         this.itemPrice = itemPrice;
     }

@@ -1,38 +1,26 @@
 package problem._2_replace_temp_with_query;
 
-import java.util.List;
+public class ReplaceTempWithQuery2 {
+    private int quantity;
+    private int itemPrice;
 
-public class ReplaceTempWithQuery {
-    private String name;
-    private List<Double> amounts;
-
-    private ReplaceTempWithQuery(String name, List<Double> amounts) {
-        this.name = name;
-        this.amounts = amounts;
+    public ReplaceTempWithQuery2(int quantity, int itemPrice) {
+        this.quantity = quantity;
+        this.itemPrice = itemPrice;
     }
 
-    public static ReplaceTempWithQuery of(String name, List<Double> amounts) {
-        return new ReplaceTempWithQuery(name, amounts);
+    public double getPrice() {
+        // 임시변수에 값이 한번만 대입되는지 확인 후, 여러 번 대입되는 경우 Split Temporary Variable을 먼저 시도한다.
+        // Split Temporary Variable(변수쪼개기) 는 또다른 임시변수를 선언하는 것
+        // 이유 : 코드를 읽는 이에게 커다른 혼란을 주기 때문이다.
+        int basePrice = quantity * itemPrice;
+
+        double discountFactor;
+        if (basePrice > 1000) discountFactor = 0.95;
+        else discountFactor = 0.98;
+
+        basePrice = itemPrice * 2;
+
+        return basePrice * discountFactor;
     }
-
-    public void printOwing() {
-        double outstanding1 = 0.0;
-        double outstanding2 = 0.0;
-        double outstanding3 = 0.0;
-        double outstanding4 = 0.0;
-
-        for (Double amount : amounts) {
-            outstanding1 += amount;
-            outstanding2 += amount * 2;
-            outstanding3 += amount * 3;
-        }
-        outstanding4 += outstanding1 + outstanding2 + outstanding3;
-
-        System.out.println("name : " + name);
-        System.out.println("amount1 : " + outstanding1);
-        System.out.println("amount2 : " + outstanding2);
-        System.out.println("amount3 : " + outstanding3);
-        System.out.println("amount4 : " + outstanding4);
-    }
-
 }

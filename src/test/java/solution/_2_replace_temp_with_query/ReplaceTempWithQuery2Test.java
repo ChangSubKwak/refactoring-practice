@@ -1,26 +1,24 @@
 package solution._2_replace_temp_with_query;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-
-import java.io.OutputStream;
-import java.util.Arrays;
+import problem._2_replace_temp_with_query.ReplaceTempWithQuery2;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static problem.CommonUtil.getOutputStream;
 
 class ReplaceTempWithQuery2Test {
 
+    @DisplayName("quantity * price 값이 1000 이하의 경우")
     @Test
-    void printOwing() {
-        ReplaceTempWithQuery replaceTempWithQuery = ReplaceTempWithQuery.of("Sonny", Arrays.asList(1000.0, 2000.0, 3000.0));
-        OutputStream out = getOutputStream(replaceTempWithQuery::printOwing);
-        assertThat(out.toString()).isEqualTo(
-            "name : Sonny\r\n" +
-                "amount1 : 6000.0\r\n" +
-                "amount2 : 12000.0\r\n" +
-                "amount3 : 18000.0\r\n" +
-                "amount4 : 36000.0\r\n"
-        );
+    void test1() {
+        problem._2_replace_temp_with_query.ReplaceTempWithQuery2 replaceTempWithQuery2 = new problem._2_replace_temp_with_query.ReplaceTempWithQuery2(1, 500);
+        assertThat(replaceTempWithQuery2.getPrice()).isEqualTo(980);
+    }
+
+    @DisplayName("quantity * price 값이 1000 초과의 경우")
+    @Test
+    void test2() {
+        problem._2_replace_temp_with_query.ReplaceTempWithQuery2 replaceTempWithQuery2 = new ReplaceTempWithQuery2(5, 500);
+        assertThat(replaceTempWithQuery2.getPrice()).isEqualTo(950);
     }
 }
