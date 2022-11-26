@@ -7,7 +7,7 @@ import java.io.OutputStream;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static problem.CommonUtil.getOutputStream;
+import static solution.CommonUtil.getOutputStream;
 
 class ReplaceTempWithQuery3Test {
 
