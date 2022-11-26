@@ -9,10 +9,11 @@ public class ReplaceTempWithQuery2 {
         this.itemPrice = itemPrice;
     }
 
+    //TODO : 임시변수에 값이 여러번 대입되는 케이스
+    // 1. 임시변수에 값이 여러 번 대입되는 경우 Split Temporary Variable을 먼저 시도한다.
+    // 2. Split Temporary Variable(변수쪼개기)는 또다른 임시변수를 선언하는 것
+    // 3. 임시변수에 값이 여러번 대입되면 코드를 읽는 이에게 커다른 혼란을 주기 때문에 Split Temporary Variable를 시도함
     public double getPrice() {
-        // 임시변수에 값이 한번만 대입되는지 확인 후, 여러 번 대입되는 경우 Split Temporary Variable을 먼저 시도한다.
-        // Split Temporary Variable(변수쪼개기) 는 또다른 임시변수를 선언하는 것
-        // 이유 : 코드를 읽는 이에게 커다른 혼란을 주기 때문이다.
         int basePrice = quantity * itemPrice;
 
         double discountFactor;

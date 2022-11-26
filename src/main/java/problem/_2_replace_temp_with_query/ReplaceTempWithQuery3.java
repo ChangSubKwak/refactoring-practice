@@ -15,6 +15,7 @@ public class ReplaceTempWithQuery3 {
         return new ReplaceTempWithQuery3(name, amounts);
     }
 
+    //TODO: 메소드 추출할 때 지역변수가 두 개 이상일 경우 연습문제
     public void printOwing() {
         double outstanding1 = 0.0;
         double outstanding2 = 0.0;
