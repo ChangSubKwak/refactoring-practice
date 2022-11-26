@@ -21,7 +21,7 @@ public class ReplaceTempWithQuery4 {
 
     public double increaseQuantityAndDecreaseItemPriceAndGetPrice() {
         // 부수효과(side effect) 발생
-        // - Separate Query from Modifier 를 이용하여 순수함수로 만들어 보기
+        // - Separate Query of Modifier 를 이용하여 순수함수로 만들어 보기
         // https://en.wikipedia.org/wiki/Pure_function
 
         // 질문 사항
