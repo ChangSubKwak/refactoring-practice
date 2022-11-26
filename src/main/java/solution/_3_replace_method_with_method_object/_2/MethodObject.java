@@ -1,21 +1,21 @@
-package solution._3_replace_method_with_method_object;
+package solution._3_replace_method_with_method_object._2;
 
 
 public class MethodObject {
-    ReplaceMethodWithMethodObject source;
+    ReplaceMethodWithMethodObject2 source;
 
     double input1;
     double input2;
     double input3;
 
-    private MethodObject(ReplaceMethodWithMethodObject source, double input1, double input2, double input3) {
+    private MethodObject(ReplaceMethodWithMethodObject2 source, double input1, double input2, double input3) {
         this.source = source;
         this.input1 = input1;
         this.input2 = input2;
         this.input3 = input3;
     }
 
-    public static MethodObject of(ReplaceMethodWithMethodObject source, double input1, double input2, double input3) {
+    public static MethodObject of(ReplaceMethodWithMethodObject2 source, double input1, double input2, double input3) {
         return new MethodObject(source, input1, input2, input3);
     }
 

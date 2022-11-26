@@ -1,18 +1,18 @@
-package solution._3_replace_method_with_method_object;
+package solution._3_replace_method_with_method_object._2;
 
 import java.util.List;
 
-public class ReplaceMethodWithMethodObject {
+public class ReplaceMethodWithMethodObject2 {
     private String name;
     private List<Double> amounts;
 
-    private ReplaceMethodWithMethodObject(String name, List<Double> amounts) {
+    private ReplaceMethodWithMethodObject2(String name, List<Double> amounts) {
         this.name = name;
         this.amounts = amounts;
     }
 
-    public static ReplaceMethodWithMethodObject of(String name, List<Double> amounts) {
-        return new ReplaceMethodWithMethodObject(name, amounts);
+    public static ReplaceMethodWithMethodObject2 of(String name, List<Double> amounts) {
+        return new ReplaceMethodWithMethodObject2(name, amounts);
     }
 
     public void printOwingOriginal(double input1, double input2, double input3) {
