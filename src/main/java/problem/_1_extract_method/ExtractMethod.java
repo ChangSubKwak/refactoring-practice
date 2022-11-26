@@ -15,7 +15,8 @@ public class ExtractMethod {
         return new ExtractMethod(name, amounts);
     }
 
-    // IDE의 기능을 사용하지 않고 시도해보기
+    // 다음의 함수를 Extract Method(0함수추출법)을 이용하여 3개의 의미 있는 함수로 나누어서 리팩토링 해보세요.
+    // - IDE의 기능을 사용하지 않고 시도해보세요.
     public void printOwing() {
         // 1 - 지역 변수 없는 경우
         System.out.println("*************************");
