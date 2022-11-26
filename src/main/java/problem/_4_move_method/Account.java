@@ -35,7 +35,7 @@ public class Account {
         }
     }
 
-    private double bankCharge()  {
+    public double bankCharge()  {
         double result = 4.5;
         if (daysOverdrawn() > 0) {
             result += overdraftCharge();
@@ -44,6 +44,6 @@ public class Account {
     }
 
     private int daysOverdrawn() {
-            return daysOverdrawn;
-        }
+        return daysOverdrawn;
+    }
 }
