@@ -18,5 +18,11 @@ class AccountV1Test {
 
 		accountV1 = AccountV1.of(AccountTypeV1.of(false, 7));
 		Assertions.assertThat(accountV1.bankCharge()).isEqualTo(16.75);
+
+		accountV1 = AccountV1.of(AccountTypeV1.of(true, 0));
+		Assertions.assertThat(accountV1.bankCharge()).isEqualTo(4.5);
+
+		accountV1 = AccountV1.of(AccountTypeV1.of(false, 0));
+		Assertions.assertThat(accountV1.bankCharge()).isEqualTo(4.5);
 	}
 }
