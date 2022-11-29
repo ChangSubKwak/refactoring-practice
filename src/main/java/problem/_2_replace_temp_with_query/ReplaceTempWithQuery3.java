@@ -16,7 +16,10 @@ public class ReplaceTempWithQuery3 {
     }
 
     //TODO: 메소드 추출할 때 지역변수가 두 개 이상일 경우 연습문제
-    // (힌트) outstanding1 ~ 4 까지 변수의 최종값에 대한 질의함수를 만들어 보세요.
+    // 1. printOwing메소드에 대해 테스트 케이스 작성
+    // 2. outstanding1 ~ 4 까지 변수의 최종값에 대한 질의함수 만들기
+    // 3. 2에서 만든 질의함수를 사용하여 임시변수(지역변수)를 제거
+    // 4. 표준출력문만 남겨보기
     public void printOwing() {
         double outstanding1 = 0.0;
         double outstanding2 = 0.0;
