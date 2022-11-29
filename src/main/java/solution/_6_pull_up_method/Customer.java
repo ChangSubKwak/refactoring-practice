@@ -5,8 +5,8 @@ public abstract class Customer {
         System.out.println("call addBill : " + date + ", " + bill);
     }
 
-    public void createBill(String date) {
-        System.out.println("call createBill : " + date);
+    public String createBill(String date) {
+        return "call createBill : " + date;
     }
 
     public abstract void changeFor(String start, String end);

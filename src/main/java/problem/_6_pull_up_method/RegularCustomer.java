@@ -1,8 +1,8 @@
 package problem._6_pull_up_method;
 
 public class RegularCustomer extends Customer {
-    public void createBill(String date) {
-        System.out.println("call createBill : " + date);
+    public String createBill(String date) {
+        return "call createBill : " + date;
     }
 
     public void changeFor(String start, String end) {
