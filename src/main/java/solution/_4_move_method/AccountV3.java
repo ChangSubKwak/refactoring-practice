@@ -14,7 +14,7 @@ public class AccountV3 {
         return new AccountV3(daysOverdrawn, accountTypeV3);
     }
 
-    private double bankCharge()  {
+    public double bankCharge()  {
         double result = 4.5;
         if (daysOverdrawn() > 0) {
             result += accountTypeV3.overdraftCharge(this);
