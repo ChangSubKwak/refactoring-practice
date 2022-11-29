@@ -2,11 +2,11 @@ package solution._3_replace_method_with_method_object._2;
 
 
 public class MethodObject {
-    ReplaceMethodWithMethodObject2 source;
+    private ReplaceMethodWithMethodObject2 source;
 
-    double input1;
-    double input2;
-    double input3;
+    private double input1;
+    private double input2;
+    private double input3;
 
     private MethodObject(ReplaceMethodWithMethodObject2 source, double input1, double input2, double input3) {
         this.source = source;
@@ -19,7 +19,15 @@ public class MethodObject {
         return new MethodObject(source, input1, input2, input3);
     }
 
-    public double getOutstanding1() {
+    public void printOwing() {
+        System.out.println("name : " + source.getName());
+        System.out.println("amount1 : " + getOutstanding1());
+        System.out.println("amount2 : " + getOutstanding2());
+        System.out.println("amount3 : " + getOutstanding3());
+        System.out.println("amount4 : " + getOutstanding4());
+    }
+
+    private double getOutstanding1() {
         double result = 0.0;
         for (Double amount : source.getAmounts()) {
             result += input1 + amount;
@@ -27,7 +35,7 @@ public class MethodObject {
         return result;
     }
 
-    public double getOutstanding2() {
+    private double getOutstanding2() {
         double result = 0.0;
         for (Double amount : source.getAmounts()) {
             result += input2 + amount * 2;
@@ -35,7 +43,7 @@ public class MethodObject {
         return result;
     }
 
-    public double getOutstanding3() {
+    private double getOutstanding3() {
         double result = 0.0;
         for (Double amount : source.getAmounts()) {
             result += input3 + amount * 3;
@@ -43,7 +51,7 @@ public class MethodObject {
         return result;
     }
 
-    public double getOutstanding4() {
+    private double getOutstanding4() {
         return getOutstanding1() + getOutstanding2() + getOutstanding3();
     }
 }

@@ -5,7 +5,7 @@ import solution._3_replace_method_with_method_object._1.ReplaceMethodWithMethodO
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReplaceMethodWithMethodObjectTest {
+class ReplaceMethodWithMethodObject1Test {
 
 	@Test
 	void gamma() {
