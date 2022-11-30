@@ -1,22 +1,25 @@
 package solution._8_extract_class;
 
+import java.util.Objects;
+
 public class TelephoneNumber {
     private String areaCode;
-    private String officeNumber;
+    private String number;
 
-    public String getOfficeAreaCode() {
+    public String getAreaCode() {
         return areaCode;
     }
 
-    public void setOfficeAreaCode(String areaCode) {
+    public String getNumber() {
+        return number;
+    }
+
+    public void setAreaCode(String areaCode) {
         this.areaCode = areaCode;
     }
 
-    public String getOfficeNumber() {
-        return officeNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
-    }
 }
