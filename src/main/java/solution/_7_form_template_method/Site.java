@@ -5,6 +5,11 @@ public abstract class Site {
     protected double units;
     protected double rate;
 
+    public Site() {
+        units = 100.0;
+        rate = 0.5;
+    }
+
     public abstract double getBaseAmount();
     public abstract double getTaxAmount();
 
