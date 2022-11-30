@@ -14,18 +14,4 @@ public class AccountTypeV4 {
     public boolean isPremium() {
         return premium;
     }
-
-    // 4. 사용하려는 부분이 변수라면 파라미터로 넘긴다.
-    public double overdraftCharge(int daysOverdrawn) {
-        if (isPremium()) {
-            final int baseCharge = 10;
-            if (daysOverdrawn <= 7) {
-                return baseCharge;
-            } else {
-                return baseCharge + (daysOverdrawn - 7) * 0.85;
-            }
-        } else {
-            return daysOverdrawn * 1.75;
-        }
-    }
 }

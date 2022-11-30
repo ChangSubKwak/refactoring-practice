@@ -1,14 +1,9 @@
 package solution._7_form_template_method;
 
 public class ResidentialSite extends Site {
-    @Override
-    public double getBaseAmount() {
-        return units * rate;
+    public double getBillableAmount() {
+        double base = units * rate;
+        double tax = base * Site.TAX_RATE;
+        return base + tax;
     }
-
-    @Override
-    public double getTaxAmount() {
-        return getBaseAmount() * Site.TAX_RATE;
-    }
-
 }

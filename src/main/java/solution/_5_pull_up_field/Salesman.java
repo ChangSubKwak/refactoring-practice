@@ -1,11 +1,12 @@
 package solution._5_pull_up_field;
 
 public class Salesman extends Employee {
-    public Salesman(String name) {
-        super.name = name;
-    }
+	private String name;
 
-    public String getName() {
-   		return super.name;
-    }
+	public Salesman(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
 }
