@@ -2,8 +2,6 @@ package solution._3_replace_method_with_method_object._1;
 
 public class Gamma {
 	private final ReplaceMethodWithMethodObject account;
-	private int inputVal;
-	private int quantity;
 	private int yearToDate;
 	private int importantValue1;
 	private int importantValue2;
@@ -11,8 +9,6 @@ public class Gamma {
 
 	public Gamma(ReplaceMethodWithMethodObject account, int inputVal, int quantity, int yearToDate) {
 		this.account = account;
-		this.inputVal = inputVal;
-		this.quantity = quantity;
 		this.yearToDate = yearToDate;
 		this.importantValue1 = (inputVal * quantity) + account.delta();
 		this.importantValue2 = (inputVal * yearToDate) + 100;
