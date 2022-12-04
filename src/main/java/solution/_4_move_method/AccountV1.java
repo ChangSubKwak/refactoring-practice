@@ -7,7 +7,7 @@ public class AccountV1 {
 
     private AccountV1(int daysOverdrawn, AccountTypeV1 accountType) {
         this.daysOverdrawn = daysOverdrawn;
-        this.accountType = accountType;
+        this.accountType = new AccountTypeV1(accountType.isPremium(), daysOverdrawn);
     }
 
     public static AccountV1 of(int daysOverdrawn, AccountTypeV1 accountType) {
@@ -46,24 +46,24 @@ public class AccountV1 {
     // 4-3. overdraftCharge 메소드의 인자에 daysOverdrawn 변수 추가
     // 4-4. AccountType클래스의 overdraftCharge 메소드 내 AccountType 객체를 접근 부분 제거
 
-    public double overdraftCharge() {
-        if (accountType.isPremium()) {
-            final int baseCharge = 10;
-            if (daysOverdrawn <= 7) {
-                return baseCharge;
-            } else {
-                return baseCharge + (daysOverdrawn - 7) * 0.85;
-            }
-        } else {
-            return daysOverdrawn * 1.75;
-        }
-    }
+//    public double overdraftCharge() {
+//        if (accountType.isPremium()) {
+//            final int baseCharge = 10;
+//            if (daysOverdrawn <= 7) {
+//                return baseCharge;
+//            } else {
+//                return baseCharge + (daysOverdrawn - 7) * 0.85;
+//            }
+//        } else {
+//            return daysOverdrawn * 1.75;
+//        }
+//    }
 
 
     public double bankCharge()  {
         double result = 4.5;
         if (daysOverdrawn() > 0) {
-            result += overdraftCharge();
+            result += accountType.overdraftCharge();
         }
         return result;
     }
