@@ -7,7 +7,7 @@ public class AccountV2 {
 
     private AccountV2(int daysOverdrawn, AccountTypeV2 accountTypeV2) {
         this.daysOverdrawn = daysOverdrawn;
-        this.accountTypeV2 = accountTypeV2;
+        this.accountTypeV2 = AccountTypeV2.of(accountTypeV2.isPremium(), this);
     }
 
     public static AccountV2 of(int daysOverdrawn, AccountTypeV2 accountTypeV2) {

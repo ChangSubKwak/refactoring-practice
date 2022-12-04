@@ -6,9 +6,17 @@ public class AccountTypeV2 {
     // 새로 만든 객체
     private AccountV2 accountV2;
 
+    private AccountTypeV2(boolean premium) {
+        this.premium = premium;
+    }
+
     private AccountTypeV2(boolean premium, AccountV2 accountV2) {
         this.premium = premium;
         this.accountV2 = accountV2;
+    }
+
+    public static AccountTypeV2 from(boolean premium) {
+        return new AccountTypeV2(premium);
     }
 
     public static AccountTypeV2 of(boolean premium, AccountV2 accountV2) {
