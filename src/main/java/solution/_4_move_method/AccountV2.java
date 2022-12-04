@@ -1,17 +1,17 @@
-package problem._4_move_method;
+package solution._4_move_method;
 
-public class Account {
+public class AccountV2 {
 
     private int daysOverdrawn;
-    private AccountType accountType;
+    private AccountTypeV2 accountType;
 
-    private Account(int daysOverdrawn, AccountType accountType) {
+    private AccountV2(int daysOverdrawn, AccountTypeV2 accountType) {
         this.daysOverdrawn = daysOverdrawn;
         this.accountType = accountType;
     }
 
-    public static Account of(int daysOverdrawn, AccountType accountType) {
-        return new Account(daysOverdrawn, accountType);
+    public static AccountV2 of(int daysOverdrawn, AccountTypeV2 accountType) {
+        return new AccountV2(daysOverdrawn, accountType);
     }
 
     //TODO
@@ -32,12 +32,7 @@ public class Account {
     // 1-6. Account클래스의 bankCharge 메소드 내, overdraftCharge 메소드가 AccountType필드를 통해 호출되도록 하기
 
     //TODO: 2. AccountType에 Account 객체를 포함하기
-    // 2-1. bankCharge메소드에 대한 테스트 케이스를 작성
-    // 2-2. overdraftCharge 메소드를 통으로 AccountType로 옮기기
-    // 2-3. AccountType클래스에 Account 객체를 필드를 선언하기
-    // 2-4. AccountType클래스 생성자를 추가(변경)하기
-    // 2-5. AccountType클래스의 overdraftCharge 메소드 내 AccountType 객체를 접근하는 부분 제거 및 daysOverdrawn은 Account 객체를 통하여 접근하도록 변경
-    // 2-6. Account클래스의 bankCharge 메소드 내, overdraftCharge 메소드가 AccountType필드를 통해 호출되도록 하기
+    // 2-1. 순환참조로 패스
 
     //TODO: 3. overdraftCharge 메소드에 Account 객체를 파라미터로 넘기기
     // 3-1. bankCharge메소드에 대한 테스트 케이스를 작성
