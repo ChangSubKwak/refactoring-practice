@@ -27,7 +27,7 @@ public class Account {
     // 1-1. bankCharge메소드에 대한 테스트 케이스를 작성
     // 1-2. overdraftCharge 메소드를 통으로 AccountType로 옮기기
     // 1-3. AccountType클래스에 daysOverdrawn 필드를 선언하기
-    // 1-4. AccountType클래스 생성자를 변경하기
+    // 1-4. AccountType클래스 daysOverdrawn필드를 받는 생성자를 추가하기
     // 1-5. AccountType클래스의 overdraftCharge 메소드 내 AccountType 객체를 접근하는 부분 제거하기
 
     //TODO: 2. AccountType에 Account 객체를 포함하기

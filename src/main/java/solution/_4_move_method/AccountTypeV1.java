@@ -1,13 +1,23 @@
 package solution._4_move_method;
 
+import problem._4_move_method.AccountType;
+
 public class AccountTypeV1 {
     private  boolean premium;
 
     private int daysOverdrawn;
 
+    private AccountTypeV1(boolean premium) {
+        this.premium = premium;
+    }
+
     private AccountTypeV1(boolean premium, int daysOverdrawn) {
         this.premium = premium;
         this.daysOverdrawn = daysOverdrawn;
+    }
+
+    public static AccountTypeV1 from(boolean premium) {
+        return new AccountTypeV1(premium);
     }
 
     public static AccountTypeV1 of(boolean premium, int daysOverdrawn) {
