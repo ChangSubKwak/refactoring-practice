@@ -7,7 +7,7 @@ public class AccountV1 {
 
     private AccountV1(int daysOverdrawn, AccountTypeV1 accountType) {
         this.daysOverdrawn = daysOverdrawn;
-        this.accountType = new AccountTypeV1(accountType.isPremium(), daysOverdrawn);
+        this.accountType = accountType;
     }
 
     public static AccountV1 of(int daysOverdrawn, AccountTypeV1 accountType) {
@@ -27,8 +27,9 @@ public class AccountV1 {
     // 1-1. bankCharge메소드에 대한 테스트 케이스를 작성
     // 1-2. overdraftCharge 메소드를 통으로 AccountType로 옮기기
     // 1-3. AccountType클래스에 daysOverdrawn 필드를 선언하기
-    // 1-4. AccountType클래스 생성자를 변경하기
+    // 1-4. AccountType클래스 생성자를 추가(변경)하기
     // 1-5. AccountType클래스의 overdraftCharge 메소드 내 AccountType 객체를 접근하는 부분 제거하기
+    // 1-6. Account클래스의 bankCharge 메소드 내, overdraftCharge 메소드가 AccountType필드를 통해 호출되도록 하기
 
     //TODO: 2. AccountType에 Account 객체를 포함하기
     // 2-1. 순환참조로 패스
@@ -46,24 +47,24 @@ public class AccountV1 {
     // 4-3. overdraftCharge 메소드의 인자에 daysOverdrawn 변수 추가
     // 4-4. AccountType클래스의 overdraftCharge 메소드 내 AccountType 객체를 접근 부분 제거
 
-//    public double overdraftCharge() {
-//        if (accountType.isPremium()) {
-//            final int baseCharge = 10;
-//            if (daysOverdrawn <= 7) {
-//                return baseCharge;
-//            } else {
-//                return baseCharge + (daysOverdrawn - 7) * 0.85;
-//            }
-//        } else {
-//            return daysOverdrawn * 1.75;
-//        }
-//    }
+    public double overdraftCharge() {
+        if (accountType.isPremium()) {
+            final int baseCharge = 10;
+            if (daysOverdrawn <= 7) {
+                return baseCharge;
+            } else {
+                return baseCharge + (daysOverdrawn - 7) * 0.85;
+            }
+        } else {
+            return daysOverdrawn * 1.75;
+        }
+    }
 
 
     public double bankCharge()  {
         double result = 4.5;
         if (daysOverdrawn() > 0) {
-            result += accountType.overdraftCharge();
+            result += overdraftCharge();
         }
         return result;
     }
