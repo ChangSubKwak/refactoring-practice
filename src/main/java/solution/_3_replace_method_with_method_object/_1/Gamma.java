@@ -1,28 +1,37 @@
 package solution._3_replace_method_with_method_object._1;
 
 public class Gamma {
-	private final ReplaceMethodWithMethodObject account;
-	private int yearToDate;
-	private int importantValue1;
-	private int importantValue2;
-	private int importantValue3;
+	private final ReplaceMethodWithMethodObject1 account;
 
-	public Gamma(ReplaceMethodWithMethodObject account, int inputVal, int quantity, int yearToDate) {
+	private int inputVal;
+	private int quantity;
+	private int yearToDate;
+	private int result;
+
+	public Gamma(ReplaceMethodWithMethodObject1 account, int inputVal, int quantity, int yearToDate) {
+		this.inputVal = inputVal;
+		this.quantity = quantity;
 		this.account = account;
 		this.yearToDate = yearToDate;
-		this.importantValue1 = (inputVal * quantity) + account.delta();
-		this.importantValue2 = (inputVal * yearToDate) + 100;
-		this.importantValue3 = importantThing() * 7;
+	}
+
+	private int getImportantValue1() {
+		return (inputVal * quantity) + account.delta();
+	}
+
+	private int getImportantValue2() {
+		return (inputVal * yearToDate) + 100;
 	}
 
 	public int compute() {
-		return importantValue3 - 2 * importantValue1;
+		return getImportantValue3() * 7 - 2 * getImportantValue1();
 	}
 
-	private int importantThing() {
-		if ((yearToDate - importantValue1) > 100) {
-			importantValue2 -= 20;
+	private int getImportantValue3() {
+		int result = getImportantValue2();
+		if ((yearToDate - getImportantValue1()) > 100) {
+			result -= 20;
 		}
-		return importantValue2;
+		return result;
 	}
 }
