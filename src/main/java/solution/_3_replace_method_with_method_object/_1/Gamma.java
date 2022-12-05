@@ -6,7 +6,6 @@ public class Gamma {
 	private int inputVal;
 	private int quantity;
 	private int yearToDate;
-	private int result;
 
 	public Gamma(ReplaceMethodWithMethodObject1 account, int inputVal, int quantity, int yearToDate) {
 		this.inputVal = inputVal;
