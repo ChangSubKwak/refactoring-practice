@@ -53,11 +53,11 @@ public class ReplaceMethodWithMethodObjectExample {
     }
 
     static class Calculation {
-        int one;
-        int two;
-        int three;
-        int four;
-        int five;
+        private int one;
+        private int two;
+        private int three;
+        private int four;
+        private int five;
 
         public Calculation(int one, int two, int three, int four, int five) {
             this.one = one;
