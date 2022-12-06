@@ -15,11 +15,8 @@ public class ReplaceTempWithQuery3 {
         return new ReplaceTempWithQuery3(name, amounts);
     }
 
-    //TODO: 메소드 추출할 때 지역변수가 두 개 이상일 경우 연습문제
-    // 1. printOwing메소드에 대해 테스트 케이스 작성
-    // 2. outstanding1 ~ 4 까지 변수의 최종값에 대한 질의함수 만들기
-    // 3. 2에서 만든 질의함수를 사용하여 임시변수(지역변수)를 제거
-    // 4. 표준출력문만 남겨보기
+    //TODO : 메소드 추출할 때 지역변수가 두 개 이상일 경우 리팩토링 해보기
+    // 메소드설명 : 지역변수가 여러개 존재하고 변경되는 케이스를 만든 것 (ReplaceTempWithQuery3 과 동일)
     public void printOwing() {
         double outstanding1 = 0.0;
         double outstanding2 = 0.0;
