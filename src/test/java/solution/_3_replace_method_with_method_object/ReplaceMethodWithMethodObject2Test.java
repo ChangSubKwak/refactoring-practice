@@ -23,11 +23,11 @@ class ReplaceMethodWithMethodObject2Test {
         ReplaceMethodWithMethodObject2 replaceMethodWithMethodObject2 = ReplaceMethodWithMethodObject2.of("Sonny", Arrays.asList(1000.0, 2000.0, 3000.0));
         OutputStream out = getOutputStream((a, b, c) -> replaceMethodWithMethodObject2.printOwing(a, b, c), input1, input2, input3);
         assertThat(out.toString()).isEqualTo(
-            "name : Sonny\r\n" +
-                "amount1 : 36000.0\r\n" +
-                "amount2 : 72000.0\r\n" +
-                "amount3 : 108000.0\r\n" +
-                "amount4 : 216000.0\r\n"
+            "name : Sonny" + System.lineSeparator() +
+                "amount1 : 36000.0" + System.lineSeparator() +
+                "amount2 : 72000.0" + System.lineSeparator() +
+                "amount3 : 108000.0" + System.lineSeparator() +
+                "amount4 : 216000.0"
         );
     }
 
