@@ -1,13 +1,13 @@
-package solution._3_replace_method_with_method_object._1;
+package solution._3_replace_method_with_method_object._3;
 
 public class Gamma {
-	private final ReplaceMethodWithMethodObject1 account;
+	private final ReplaceMethodWithMethodObject3 account;
 
 	private int inputVal;
 	private int quantity;
 	private int yearToDate;
 
-	public Gamma(ReplaceMethodWithMethodObject1 account, int inputVal, int quantity, int yearToDate) {
+	public Gamma(ReplaceMethodWithMethodObject3 account, int inputVal, int quantity, int yearToDate) {
 		this.inputVal = inputVal;
 		this.quantity = quantity;
 		this.account = account;
@@ -22,7 +22,7 @@ public class Gamma {
 		return (inputVal * yearToDate) + 100;
 	}
 
-	public int compute() {
+	public int gamma() {
 		return getImportantValue3() * 7 - 2 * getImportantValue1();
 	}
 

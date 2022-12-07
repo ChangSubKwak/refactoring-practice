@@ -1,9 +1,9 @@
 package problem._3_replace_method_with_method_object;
 
-public class ReplaceMethodWithMethodObject1 {
+public class ReplaceMethodWithMethodObject3 {
 	private int delta;
 
-	public ReplaceMethodWithMethodObject1(int delta) {
+	public ReplaceMethodWithMethodObject3(int delta) {
 		this.delta = delta;
 	}
 
@@ -15,8 +15,8 @@ public class ReplaceMethodWithMethodObject1 {
 	//    - (선택) gamma함수에서 사용되는 임시변수를 Replace Temp with Query를 사용하여 제거 가능
 	// 5. Gamma 클래스에 Gamma(ReplaceMethodWithMethodObject account, int inputVal, int quantity, int yearToDate)와 같이
 	//    gamma 메소드의 인자들과, ReplaceMethodWithMethodObject를 참조할 수 있는 생성자 만들기
-	// 6. 새롭게 만든 Gamma 클래스에 compute 메소드를 만들고 아래 메소드 코드를 복사하고 붙여넣기
-	// 7. 새롭게 만든 Gamma 클래스에 compute 인자를 비롯, 메소드내 불필요한 변수는 제거하고, 클래스 필드를 사용하도록 수정
+	// 6. 새롭게 만든 Gamma 클래스에 gamma 메소드를 만들고 아래 메소드 코드를 복사하고 붙여넣기
+	// 7. 새롭게 만든 Gamma 클래스에 gamma 인자를 비롯, 메소드내 불필요한 변수는 제거하고, 클래스 필드를 사용하도록 수정
 	//    - ReplaceMethodWithMethodObject의 필드를 접근할 수 있는 getter 생성
 	// 8. 아래의 gamma 메소드에서는 새로운 클래스의 객체의 compute메소드를 호출하도록 변경
 	public int gamma(int inputVal, int quantity, int yearToDate) {
