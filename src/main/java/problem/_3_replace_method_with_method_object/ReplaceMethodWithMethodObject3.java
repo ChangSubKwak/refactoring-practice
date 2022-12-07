@@ -1,9 +1,9 @@
-package solution._3_replace_method_with_method_object._1;
+package problem._3_replace_method_with_method_object;
 
-public class ReplaceMethodWithMethodObject1 {
+public class ReplaceMethodWithMethodObject3 {
 	private int delta;
 
-	public ReplaceMethodWithMethodObject1(int delta) {
+	public ReplaceMethodWithMethodObject3(int delta) {
 		this.delta = delta;
 	}
 
