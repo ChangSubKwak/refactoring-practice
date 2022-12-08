@@ -1,11 +1,9 @@
-package solution._1_extract_method;
+package solution._1_extract_method._1;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
