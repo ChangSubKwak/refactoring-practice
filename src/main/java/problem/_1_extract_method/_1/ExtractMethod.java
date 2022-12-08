@@ -1,4 +1,4 @@
-package problem._1_extract_method;
+package problem._1_extract_method._1;
 
 import java.util.List;
 
