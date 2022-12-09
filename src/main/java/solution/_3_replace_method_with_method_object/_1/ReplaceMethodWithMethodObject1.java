@@ -4,7 +4,7 @@ public class ReplaceMethodWithMethodObject1 {
     private int six = 6;
 
     public void printNumberAndStatistics(int seven) {
-        new MethodObject(this, seven).manyTempVariablesExist();
+        new MethodObject(this, seven).printNumberAndStatistics();
     }
 
     public int getSix() {

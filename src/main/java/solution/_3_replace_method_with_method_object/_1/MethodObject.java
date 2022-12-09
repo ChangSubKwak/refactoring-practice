@@ -16,7 +16,7 @@ public class MethodObject {
 		this.seven = seven;
 	}
 
-	public void manyTempVariablesExist() {
+	public void printNumberAndStatistics() {
 		printNumber();
 		printCalculationResult();
 	}
