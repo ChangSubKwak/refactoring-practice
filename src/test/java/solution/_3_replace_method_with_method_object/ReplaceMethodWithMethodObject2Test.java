@@ -27,7 +27,7 @@ class ReplaceMethodWithMethodObject2Test {
                 "amount1 : 36000.0" + System.lineSeparator() +
                 "amount2 : 72000.0" + System.lineSeparator() +
                 "amount3 : 108000.0" + System.lineSeparator() +
-                "amount4 : 216000.0"
+                "amount4 : 216000.0" + System.lineSeparator()
         );
     }
 

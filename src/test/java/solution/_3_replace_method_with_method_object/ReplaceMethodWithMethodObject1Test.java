@@ -1,14 +1,11 @@
 package solution._3_replace_method_with_method_object;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import solution._3_replace_method_with_method_object._1.ReplaceMethodWithMethodObject1;
-import solution._3_replace_method_with_method_object._2.ReplaceMethodWithMethodObject2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,7 +16,7 @@ class ReplaceMethodWithMethodObject1Test {
         int seven = 7;
 
         ReplaceMethodWithMethodObject1 replaceMethodWithMethodObject1 = new ReplaceMethodWithMethodObject1();
-        OutputStream out = getOutputStream((e) -> replaceMethodWithMethodObject1.manyTempVariablesExist(e), seven);
+        OutputStream out = getOutputStream((e) -> replaceMethodWithMethodObject1.printNumberAndStatistics(e), seven);
         assertThat(out.toString()).isEqualTo(
             "one = 1" + System.lineSeparator() +
             "two = 2" + System.lineSeparator() +
