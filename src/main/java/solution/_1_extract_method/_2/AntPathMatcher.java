@@ -84,17 +84,11 @@ public class AntPathMatcher {
 		return isBracketOpen;
 	}
 
-	private boolean isBracketClosed(char character, boolean isCurlyBracketOpen) {
-		if (character == '}' && isCurlyBracketOpen) {
-			return true;
-		}
-		return false;
+	private boolean isBracketClosed(char character, boolean isBracketOpen) {
+		return character == '}' && isBracketOpen;
 	}
 
 	private boolean containsAsteriskOrQuestionMark(char character) {
-		if (Arrays.asList('*', '?').contains(character)) {
-			return true;
-		}
-		return false;
+		return Arrays.asList('*', '?').contains(character);
 	}
 }
