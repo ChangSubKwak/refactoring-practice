@@ -40,10 +40,11 @@
 ## 🚀 리팩토링 실습
 
 1. `Extract Method`
-   - **테스트 코드 이미 작성된 것 사용**
-   - **IDE의 `Extract Method` 기능을 사용하지 않고, 직접 리팩토링 하기**
-   - printOwing() 를 3개의 의미있는 메소드로 구성되도록 리팩토링  
-     <br>
+   1. 첫번째 문제
+      - **테스트 코드 이미 작성된 것 사용**
+      - **IDE의 `Extract Method` 기능을 사용하지 않고, 직접 리팩토링 하기**
+      - printOwing() 를 3개의 의미있는 메소드로 구성되도록 리팩토링    
+<br>
 2. `Replace Temp With Query`
    1. 첫번째 문제
       - getPrice메소드에 대해 테스트 케이스 작성
