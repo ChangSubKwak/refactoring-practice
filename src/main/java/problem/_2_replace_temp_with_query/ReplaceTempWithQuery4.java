@@ -22,9 +22,10 @@ public class ReplaceTempWithQuery4 {
     // 3. ReplaceTempWithQuery1에서 정의된 getPrice메소드와 동일한 기능을 가지도록 메소드 분리해보기
 
     public double increaseQuantityAndDecreaseItemPriceAndGetPrice() {
+        int basePrice = quantity * itemPrice;
         quantity++;
         itemPrice -= 100;
-        int basePrice = quantity * itemPrice;
+        basePrice = quantity * itemPrice;
 
         double discountFactor;
         if (basePrice > 1000) discountFactor = 0.95;
