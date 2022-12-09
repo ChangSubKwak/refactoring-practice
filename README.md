@@ -40,11 +40,16 @@
 ## 🚀 리팩토링 실습
 
 1. `Extract Method`
-   1. 첫번째 문제
+    - 공통 내용
       - **테스트 코드 이미 작성된 것 사용**
       - **IDE의 `Extract Method` 기능을 사용하지 않고, 직접 리팩토링 하기**
-      - printOwing() 를 3개의 의미있는 메소드로 구성되도록 리팩토링    
-<br>
+   1. 첫번째 문제
+      - printOwing 메소드를 3개의 의미있는 메소드로 구성되도록 리팩토링
+   2. 두번째 문제
+      - isPattern 메소드의 내부를 `Extract Method`를 이용하여 의미 있는 메소드로 구성해보기
+      - for문에서 foreach을 사용하여 리팩토링
+      - `return true` 조건과 `continue` 조건에 대해서 `Extract Method` 해보기   
+<br>  
 2. `Replace Temp With Query`
    1. 첫번째 문제
       - getPrice메소드에 대해 테스트 케이스 작성
@@ -68,14 +73,12 @@
 3. `Replace Method With Method`
    1. 첫번재 문제
       - **테스트 코드 이미 작성된 것 사용** 
-      - gamma 메소드에 대한 테스트 코드 작성
-      - 메소드의 이름을 따서 새로운 클래스(Gamma) 생성
-      - gamma 메소드에 내에 새롭게 작성한 클래스의 메소드를 호출하도록 변경
+      - printNumberAndStatistics 메소드를 대체할 클래스 생성
+      - printNumberAndStatistics 메소드에 내에 새롭게 작성한 클래스의 메소드를 호출하도록 리팩터링
    2. 두번재 문제
       - **테스트 코드 이미 작성된 것 사용**
-      - printOwing 메소드에 대한 테스트 코드 작성 (이미 작성된 것 활용)
-      - 메소드의 이름을 따서 새로운 클래스 생성
-      - printOwing 메소드내, 새로운 클래스의 메소드를 호출하도록 리팩터링
+      - printOwing 메소드를 대체할 클래스 생성
+      - printOwing 메소드 내에 새로게 작성한 클래스의 메소드를 호출하도록 리팩터링
       <br>
 
 ---
