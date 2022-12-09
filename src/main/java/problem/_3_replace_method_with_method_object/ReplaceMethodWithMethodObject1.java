@@ -3,7 +3,7 @@ package problem._3_replace_method_with_method_object;
 public class ReplaceMethodWithMethodObject1 {
 	private int six = 6;
 
-	public void manyTempVariablesExist(int seven) {
+	public void printNumberAndStatistics(int seven) {
 		int one = 1;
 		int two = 2;
 		int three = 3;
@@ -29,4 +29,3 @@ public class ReplaceMethodWithMethodObject1 {
 		System.out.println("variation = " + variation);
 	}
 }
-

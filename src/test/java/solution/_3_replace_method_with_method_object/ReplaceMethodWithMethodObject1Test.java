@@ -16,7 +16,7 @@ class ReplaceMethodWithMethodObject1Test {
         int seven = 7;
 
         ReplaceMethodWithMethodObject1 replaceMethodWithMethodObject1 = new ReplaceMethodWithMethodObject1();
-        OutputStream out = getOutputStream((e) -> replaceMethodWithMethodObject1.manyTempVariablesExist(e), seven);
+        OutputStream out = getOutputStream((e) -> replaceMethodWithMethodObject1.printNumberAndStatistics(e), seven);
         assertThat(out.toString()).isEqualTo(
                 "one = 1" + System.lineSeparator() +
                         "two = 2" + System.lineSeparator() +
