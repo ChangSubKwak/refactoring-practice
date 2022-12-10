@@ -16,7 +16,7 @@ public class ReplaceMethodWithMethodObject2 {
     }
 
     //TODO: 다음의 메소드를 메소드 객체로 전환하기(1판 - Replace Method with Method Object, 2판 - Replace Function with Command)
-    // 참고) 다음 예제는 ReplaceTempWithQuery3 과 동일한 코드이며, 리팩터링 방법에 따라 결과가 어떻게 다른지 비교해보기
+    // 메소드설명 : 메소드 인자가 존재하고, 지역변수가 여러개 존재하고 변경되는 케이스를 만든 것 (ReplaceTempWithQuery3와 유사한 코드)
     public void printOwing(double input1, double input2, double input3) {
         double outstanding1 = 0.0;
         double outstanding2 = 0.0;
