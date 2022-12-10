@@ -49,7 +49,7 @@
       - isPattern 메소드의 내부를 `Extract Method`를 이용하여 의미 있는 메소드로 구성해보기
       - for문에서 foreach을 사용하여 리팩토링
       - `return true` 조건과 `continue` 조건에 대해서 `Extract Method` 해보기   
-<br>  
+      <br>  
 2. `Replace Temp With Query`
    1. 첫번째 문제
       - getPrice메소드에 대해 테스트 케이스 작성
