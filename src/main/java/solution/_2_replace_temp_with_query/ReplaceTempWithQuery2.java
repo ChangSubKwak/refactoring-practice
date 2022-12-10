@@ -14,10 +14,10 @@ public class ReplaceTempWithQuery2 {
     }
 
     private double getDiscountFactor() {
-        double discountFactor;
-        if (getBasePrice() > 1000) discountFactor = 0.95;
-        else discountFactor = 0.98;
-        return discountFactor;
+        if (getBasePrice() > 1000) {
+            return 0.95;
+        }
+        return 0.98;
     }
 
     private int getBasePrice() {
