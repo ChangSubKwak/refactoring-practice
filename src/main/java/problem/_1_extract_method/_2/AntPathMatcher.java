@@ -64,7 +64,7 @@ import java.nio.file.PathMatcher;
  */
 public class AntPathMatcher {
 
-	//TODO: 아래의 isPattern을 Extract Method를 이용하여 의미있는 메소드로 만들고, 전체 길이를 줄여보세요.
+	//TODO: 아래의 isPattern을 Extract Method(Decompose Conditional)를 이용하여 의미있는 메소드로 만들고, 전체 길이를 줄여보세요.
 	// 소스출처 : https://github.com/spring-projects/spring-framework/blob/main/spring-core/src/main/java/org/springframework/util/AntPathMatcher.java
 	// 메소드설명 : 빌드툴 Ant 코드 중 경로패턴에 맞는지 체크하는 메소드
 	public boolean isPattern(String path) {
