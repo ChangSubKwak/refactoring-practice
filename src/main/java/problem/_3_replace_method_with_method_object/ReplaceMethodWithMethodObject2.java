@@ -16,7 +16,7 @@ public class ReplaceMethodWithMethodObject2 {
     }
 
     //TODO: 다음의 메소드를 메소드 객체로 전환하기(1판 - Replace Method with Method Object, 2판 - Replace Function with Command)
-    // 메소드설명 : 지역변수가 여러개 존재하고 변경되는 케이스를 만든 것 (ReplaceTempWithQuery3 과 동일)
+    // 메소드설명 : 메소드 인자가 존재하고, 지역변수가 여러개 존재하고 변경되는 케이스를 만든 것 (ReplaceTempWithQuery3의 메소드와 인자를 제외하고 동일)
     public void printOwing(double input1, double input2, double input3) {
         double outstanding1 = 0.0;
         double outstanding2 = 0.0;
