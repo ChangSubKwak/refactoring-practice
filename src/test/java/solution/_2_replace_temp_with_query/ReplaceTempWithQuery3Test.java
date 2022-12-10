@@ -2,6 +2,7 @@ package solution._2_replace_temp_with_query;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import problem._2_replace_temp_with_query.ReplaceTempWithQuery3;
 
 
 import java.io.OutputStream;

@@ -18,20 +18,37 @@ public class ReplaceTempWithQuery3 {
 
     public void printOwing() {
         System.out.println("name : " + name);
-        System.out.println("amount1 : " + getOutstandingMultipliedBy(1));
-        System.out.println("amount2 : " + getOutstandingMultipliedBy(2));
-        System.out.println("amount3 : " + getOutstandingMultipliedBy(3));
+        System.out.println("amount1 : " + getOutstanding1());
+        System.out.println("amount2 : " + getOutstanding2());
+        System.out.println("amount3 : " + getOutstanding3());
         System.out.println("amount4 : " + getOutstanding4());
     }
 
-    private double getOutstandingMultipliedBy(double multiplier) {
-        return amounts.stream()
-            .reduce(0.0, (x, y) -> x + y * multiplier);
+    private double getOutstanding1() {
+        double result = 0.0;
+        for (Double amount : amounts) {
+            result += amount;
+        }
+        return result;
+    }
+
+    private double getOutstanding2() {
+        double result = 0.0;
+        for (Double amount : amounts) {
+            result += amount * 2;
+        }
+        return result;
+    }
+
+    private double getOutstanding3() {
+        double result = 0.0;
+        for (Double amount : amounts) {
+            result += amount * 3;
+        }
+        return result;
     }
 
     private double getOutstanding4() {
-        return Arrays.asList(1.0, 2.0, 3.0)
-            .stream()
-            .reduce(0.0, (x, y) -> x + getOutstandingMultipliedBy(y));
+        return getOutstanding1() + getOutstanding2() + getOutstanding3();
     }
 }
